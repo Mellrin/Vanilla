@@ -1,0 +1,33 @@
+$background: forestgreen;
+$color: #fff;
+$itemBackground: #000;
+
+#root {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.control-area {
+  padding: 50px;
+}
+.gameField {
+  background: $background;
+  display: grid;
+  grid-template-columns: repeat(6, 150px);
+  padding: 20px;
+  &__item {
+    height: 150px;
+    margin-right: 10px;
+    border: 6px solid $itemBackground;
+    cursor: pointer;
+    color: $color;
+    font-size: 80px;
+    text-align: center;
+    line-height: 150px;
+    &:nth-child(n + 7) {
+      margin-top: 10px;
+    }
+    &:nth-child(6n) {
+      margin-right: 0;
+    }
+  }
+}
